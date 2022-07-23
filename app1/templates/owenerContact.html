@@ -1,0 +1,36 @@
+{% extends 'master.html' %}
+{% block content %}
+<h1> Welcome Mr. {{ USER.name}}</h1><br>
+    <form method="POST"> 
+        {% csrf_token %}
+        <div  style="background-color: rgb(199, 233, 220);">
+            <div class="card-block" style="padding: 1.25rem;">
+                <h6 class="m-b-20 p-b-5 b-b-default f-w-600" style=" border-bottom: 1px solid #e0e0e0;  padding-bottom: 5px !important; margin-bottom: 20px;">details</h6>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="m-b-10 f-w-600 fw-bold" style=" line-height: 25px; margin-bottom: 10px;">name</p>
+                        <h6 class="text-muted f-w-400" style=" color: #919aa3 !important;"><input type="text" name="name" placeholder="name" /></h6>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="m-b-10 fw-bold" style="  margin-bottom: 10px;font-weight: 600;">Phone</p>
+                        <h6 class="text-muted f-w-400">      <input type="tel" name="number" pattern="[0-9]{10}" placeholder=""/></h6>
+                    </div>
+                </div>
+                <h6 class="m-b-20 m-t-40 p-b-5 b-b-default fw-bold" style="margin-top: 20px;  border-bottom: 1px solid #e0e0e0; margin-top: 20px; padding-bottom: 5px !important; margin-bottom: 20px;">problem & inquary</h6>
+                <h6 class="text-muted f-w-400"><textarea type="text" name="problem" rows="5" cols="100" placeholder="problem"></textarea></h6>
+                    <br>
+                    <div class="">
+                        <p class="m-b-10 fw-bold">Bussiness_type</p>
+                        <h6 class="text-muted f-w-400">  <input type="text" name="bussiness" placeholder="bussiness"  /></h6>
+                    </div><br>
+                    <button type="submit" style="background-color:rgb(212, 234, 103) ;">submit</button>
+                
+            </div>
+        </div>
+        
+    
+    </form>
+    
+
+    {% endblock %}
+

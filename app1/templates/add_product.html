@@ -1,0 +1,29 @@
+{% extends 'master.html' %}
+{% block content %}
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- <input type="text" name="productname" placeholder="productname" required /><br>
+            <br><input type="file" name="image" value="image"  required /><br>
+            <br><textarea type="text" name="dec" placeholder="decprition" cols="50" rows="4" required></textarea>
+            <br><br><input type="number" name="price" placeholder="price" required />
+            <br><br><input type="text" name="rating" placeholder="rating" required/>
+            <br><br>       <input type="submit" name="submin" value="submin" /> -->
+            <div class="colman">
+                <div class="card" style="width: 18rem;  background-color: rgb(93, 186, 228);">
+                  <input type="file" name="image"class="mt-3 ml-3" value="image"  required /><br>
+                  <div class="card-body">
+                    <h5 class="card-title"><input type="text" name="productname" placeholder="productname" required /></h5>
+                    <p class="card-text"><input type="number" name="price" placeholder="price" required /></p>
+                    <textarea type="text" name="dec" placeholder="decprition" cols="30" rows="4" required></textarea>
+                    <p><input type="text" name="rating" placeholder="rating" required/></p>
+                    <input type="submit" name="submin" value="submin" />
+                  </div>
+                </div>
+                </div>
+        </form>
+    </div>
+
+ 
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'master.html' %}
+{% block content%}
+
+        
+        <!-- <div>
+            <h1>worker name</h1>
+            <table border="1" class="table table-striped">
+                {% for i in q %}
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">number</th>
+                <th scope="col">password</th>
+            <th>fullview</th>
+        </tr>
+        <tr>
+            <td> {{i.name}}</td>
+            <td> {{i.email}}</td>
+            <td> {{i.numbers}}</td>
+            <td> {{i.password}}</td>
+            <td><a href="{% url 'about' %}">view</a></td>
+            
+            
+        </tr>
+        {% endfor %}
+        <br>
+    </table>
+</div> -->
+
+
+<div>
+   
+    <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{pv.image.url}}" style="height: 200px;width: 285.5px;">
+            <div class="card-body">
+              <h5 class="card-title">{{pv.name}}</h5>
+              <p class="card-text">dec: {{pv.dec}}</p>
+              <p class="card-text">price: {{pv.price}}</p>
+              <p class="card-text">rating: {{pv.rating}}*</p>
+              
+              <a href="{% url 'contact' %}" class="text-info">back</a>
+
+            </div>
+        </div> 
+    </div>
+    
+    
+   {% endblock %}
